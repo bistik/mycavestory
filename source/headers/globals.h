@@ -21,4 +21,11 @@ struct Vector2 {
 	}
 };
 
+enum Direction {
+	LEFT,
+	RIGHT,
+	UP,
+	DOWN
+};
+
 #endif
