@@ -8,6 +8,25 @@ namespace globals {
 	const float SPRITE_SCALE = 2.0f;
 }
 
+namespace sides {
+	enum Side {
+		TOP,
+		BOTTOM,
+		LEFT,
+		RIGHT,
+		NONE
+	};
+
+	inline Side getOppositeSide(Side side) {
+		switch (side) {
+			   case TOP: return BOTTOM;
+			case BOTTOM: return TOP;
+			  case LEFT: return RIGHT;
+			 case RIGHT: return LEFT;
+			    default: return NONE;
+		};
+	}
+}
 struct Vector2 {
 	int x, y;
 	Vector2() :
